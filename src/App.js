@@ -1,14 +1,19 @@
+import { useState } from 'react';
+
 function App() {
-  function handleClick() {
-    console.log('button clicked');
+  const [count, setCount] = useState(0);
+
+  function handleClick(num) {
+    setCount(count + num);
   }
 
   return (
     <div id='container'>
       <div id='navbar'>Counter.js</div>
       <div id='counter'>
-        <p>You clicked ___ times</p>
-        <button onClick={handleClick}>Increment</button>
+        <h1>{count}</h1>
+        <button onClick={() => handleClick(1)}>Increment</button>
+        <button onClick={() => handleClick(2)}>Increment x 2</button>
       </div>
     </div>
   );

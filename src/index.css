@@ -50,3 +50,7 @@ body {
 #counter button:hover {
   background-color: #65878F;
 }
+
+button {
+  margin-bottom: 3%;
+}
